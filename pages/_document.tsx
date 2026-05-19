@@ -4,6 +4,10 @@ export default function Document() {
   return (
     <Html>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="vljRRmq3OONiFR43yFjMW0Rv1FQDsuv7Svxj-2zExoc"
+        />
         <link
           rel="icon"
           type="image/png"
