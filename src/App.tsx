@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useMemo, ReactNode } from "react";
+import React, { useState, useEffect, useMemo, useRef, ReactNode } from "react";
 import {
   Shield,
   Download,
@@ -953,6 +953,8 @@ const Footer = ({
 
 export default function App() {
   const router = useRouter();
+  /** 首屏 SSG/HTML 不做 opacity:0，避免 JS 加载前白屏；站内跳转仍保留淡入 */
+  const skipPageEnterAnimation = useRef(true);
   const pathname = useMemo(() => {
     if (typeof window !== "undefined") {
       return stripSiteBasePath(window.location.pathname || "/");
@@ -1010,6 +1012,14 @@ export default function App() {
     document.documentElement.lang = toHtmlLang(locale);
     window.scrollTo(0, 0);
   }, [locale, pathname]);
+
+  useEffect(() => {
+    skipPageEnterAnimation.current = false;
+  }, []);
+
+  const pageEnterInitial = skipPageEnterAnimation.current
+    ? false
+    : { opacity: 0, y: 15 };
 
   const currentCanonicalPath = isNotFound
     ? toCanonicalPath(pathname)
@@ -1078,7 +1088,7 @@ export default function App() {
           <AnimatePresence mode="wait">
             <motion.div
               key={pathname}
-              initial={{ opacity: 0, y: 15 }}
+              initial={pageEnterInitial}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4 }}
