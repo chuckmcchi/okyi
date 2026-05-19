@@ -724,161 +724,83 @@ const homePrimaryEntryCards = [
   },
 ];
 
-const BeginnerIndexContent = ({
-  pageData,
-  onNavigate,
-}: {
-  pageData: PageData;
-  onNavigate: (path: string) => void;
-}) => (
-  <div className="mb-16 space-y-8">
-    <section className="rounded-[2rem] border border-sky-100 bg-sky-50/70 p-7 shadow-sm shadow-sky-100/60 md:p-10">
-      <p className="mb-4 text-sm font-black text-cyan-700">
-        欧意交易所入口
-      </p>
-      <h2 className="max-w-4xl text-3xl font-black leading-tight text-slate-950 md:text-4xl">
-        欧意OKX交易所，Web网址、APP下载和注册入口
-      </h2>
-      <div className="mt-5 max-w-4xl space-y-4 text-base leading-8 text-slate-700">
-        <p>
-          欧意、欧易、OKX、OKEx、殴易OKX，很多时候是在说同一个交易平台的不同称呼。欧易是中文用户更常用的叫法，OKX是现在更通用的品牌名，OKEx则是早期名称。用户搜欧意或殴易OKX，多数也是在找欧易OKX的访问入口、APP下载地址、PC端网址和注册安装链接。
-        </p>
-        <p>
-          OKX通常被视为全球头部加密资产交易平台之一，覆盖现货、合约、C2C买币、赚币、Web3钱包和多端访问。对新手来说，先把下载、注册、认证、买U、资金划转和安全设置这几步理顺，比一上来研究复杂交易更重要。
-        </p>
-      </div>
-    </section>
+const BeginnerIndexContent = ({pageData}: {pageData: PageData}) => {
+  const sections = pageData.homeSections;
+  if (!sections) return null;
 
-    <section className="grid gap-5 md:grid-cols-3">
-      <div className="rounded-[1.5rem] border border-sky-100 bg-white p-6 shadow-sm shadow-sky-100/50">
-        <h2 className="mb-3 text-xl font-black text-slate-950">
-          欧意OKX提供什么
+  return (
+    <div className="mb-16 space-y-8">
+      <section className="rounded-[2rem] border border-sky-100 bg-sky-50/70 p-7 shadow-sm shadow-sky-100/60 md:p-10">
+        <p className="mb-4 text-sm font-black text-cyan-700">{sections.introLabel}</p>
+        <h2 className="max-w-4xl text-3xl font-black leading-tight text-slate-950 md:text-4xl">
+          {sections.introHeading}
         </h2>
-        <p className="text-sm leading-7 text-slate-700">
-          常用功能包括现货交易、合约交易、C2C买币、充值提现、赚币产品、Web3钱包、手机APP、网页版和电脑客户端。
-        </p>
-      </div>
-      <div className="rounded-[1.5rem] border border-sky-100 bg-white p-6 shadow-sm shadow-sky-100/50">
-        <h2 className="mb-3 text-xl font-black text-slate-950">
-          有哪些常见币种
-        </h2>
-        <p className="text-sm leading-7 text-slate-700">
-          新手常见会先看 BTC、ETH、USDT、USDC、SOL、OKB 等主流资产，也会看到不同公链、热门板块和Web3相关资产。
-        </p>
-      </div>
-      <div className="rounded-[1.5rem] border border-sky-100 bg-white p-6 shadow-sm shadow-sky-100/50">
-        <h2 className="mb-3 text-xl font-black text-slate-950">
-          新手为什么容易上手
-        </h2>
-        <p className="text-sm leading-7 text-slate-700">
-          下载、注册、买U、划转、现货交易和安全设置都有清晰路径。先用小额资金熟悉流程，再看合约和复杂产品，会稳很多。
-        </p>
-      </div>
-    </section>
-
-    <section className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10">
-      <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p className="mb-4 text-sm font-black text-cyan-700">
-            欧易OKX的优势
-          </p>
-          <h2 className="text-3xl font-black leading-tight text-slate-950">
-            为什么很多人会选择欧易OKX
-          </h2>
+        <div className="mt-5 max-w-4xl space-y-4 text-base leading-8 text-slate-700">
+          {sections.introParagraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
-        <div className="space-y-5 text-base leading-8 text-slate-700">
-          <p>
-            第一是产品线完整。新手可以从注册、买U、现货交易开始，熟悉以后再看合约、赚币和Web3钱包，不需要频繁切换不同平台。
-          </p>
-          <p>
-            第二是多端入口齐全。手机APP适合日常查看和确认操作，网页版适合临时访问，PC端适合长时间看盘、管理订单和多窗口使用。
-          </p>
-          <p>
-            第三是对新手相对友好。买U、资金账户、交易账户、身份认证、谷歌验证、资金密码这些流程虽然一开始看起来多，但路径比较清楚，按顺序处理就不容易乱。
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="rounded-[2rem] border border-sky-100 bg-sky-50/60 p-7 md:p-10">
-      <h2 className="mb-5 text-2xl font-black text-slate-950">
-        欧意OKX安不安全，怎么让自己更安心
-      </h2>
-      <div className="max-w-5xl space-y-4 text-base leading-8 text-slate-700">
-        <p>
-          判断交易所安不安全，不能只看名气，还要看三件事：平台规模是否足够大，账户保护工具是否完整，用户自己能不能把登录、提现和设备管理做扎实。欧易OKX的优势在于产品成熟、用户量大、风控和账户安全功能比较完整。
-        </p>
-        <p>
-          对新手来说，安心感不是来自一句“没风险”，而是来自可控的使用方式：先开谷歌验证和资金密码，设置防钓鱼码，绑定常用设备；第一次买U、划转、现货买卖和提现都用小额测试，确认流程熟了再增加金额。
-        </p>
-      </div>
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
-        {[
-          {
-            title: "账户保护",
-            text: "手机号、邮箱、谷歌验证、资金密码、防钓鱼码和设备管理都打开，账号被盗风险会低很多。",
-          },
-          {
-            title: "资金操作",
-            text: "充值、买U、划转、提现先用小额跑一遍。能独立查到账记录和订单记录，再增加使用金额。",
-          },
-          {
-            title: "交易风险",
-            text: "现货适合先熟悉流程，合约和杠杆放大收益也放大亏损，新手不要把它当成入门产品。",
-          },
-        ].map((item) => (
-          <div key={item.title} className="rounded-2xl border border-sky-100 bg-white p-5">
-            <h3 className="mb-2 text-base font-black text-slate-950">
-              {item.title}
-            </h3>
-            <p className="text-sm leading-7 text-slate-700">{item.text}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <section className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10">
-      <h2 className="mb-6 text-2xl font-black text-slate-950">
-        欧意交易所入口常见问题
-      </h2>
-      <div className="space-y-4">
-        {[
-          {
-            q: "欧意、欧易、OKX、OKEx是同一个吗？",
-            a: "欧易是中文用户常见叫法，OKX是现在更通用的品牌名，OKEx是早期名称。欧意、殴易OKX多是用户搜索时的写法差异，通常指向同一类访问、下载和注册需求。",
-          },
-          {
-            q: "欧易OKX适合新手吗？",
-            a: "适合从基础流程开始的新手。先完成注册认证、买U、资金划转和现货交易，再逐步了解合约、赚币和Web3钱包，会比直接上复杂产品稳妥。",
-          },
-          {
-            q: "欧意OKX有哪些币种？",
-            a: "常见主流资产包括 BTC、ETH、USDT、USDC、SOL、OKB 等，也有不同公链、热门板块和Web3相关资产。具体可交易资产以平台页面显示为准。",
-          },
-          {
-            q: "欧意OKX比同行强在哪里？",
-            a: "优势主要在多端入口完整、交易产品丰富、C2C和现货路径清晰、Web3钱包生态完善。对普通用户来说，能把下载、注册、买U、交易和安全设置放在一条路径里处理，会更容易上手。",
-          },
-          {
-            q: "使用欧易OKX怎样更安全？",
-            a: "核对入口和APP名称，开启谷歌验证、资金密码、防钓鱼码和设备管理；买卖前先小额测试，合约和杠杆产品不要急着碰。",
-          },
-        ].map((item) => (
+      <section className="grid gap-5 md:grid-cols-3">
+        {sections.highlightCards.map((card) => (
           <div
-            key={item.q}
-            className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5"
+            key={card.title}
+            className="rounded-[1.5rem] border border-sky-100 bg-white p-6 shadow-sm shadow-sky-100/50"
           >
-            <h3 className="mb-2 text-base font-black text-slate-950">
-              {item.q}
-            </h3>
-            <p className="text-sm leading-7 text-slate-700">{item.a}</p>
+            <h2 className="mb-3 text-xl font-black text-slate-950">{card.title}</h2>
+            <p className="text-sm leading-7 text-slate-700">{card.text}</p>
           </div>
         ))}
-      </div>
-    </section>
+      </section>
 
-  </div>
-);
+      <section className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10">
+        <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="mb-4 text-sm font-black text-cyan-700">{sections.advantages.label}</p>
+            <h2 className="text-3xl font-black leading-tight text-slate-950">
+              {sections.advantages.heading}
+            </h2>
+          </div>
+          <div className="space-y-5 text-base leading-8 text-slate-700">
+            {sections.advantages.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-[2rem] border border-sky-100 bg-sky-50/60 p-7 md:p-10">
+        <h2 className="mb-5 text-2xl font-black text-slate-950">{sections.safety.heading}</h2>
+        <div className="max-w-5xl space-y-4 text-base leading-8 text-slate-700">
+          {sections.safety.paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {sections.safety.cards.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-sky-100 bg-white p-5">
+              <h3 className="mb-2 text-base font-black text-slate-950">{item.title}</h3>
+              <p className="text-sm leading-7 text-slate-700">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10">
+        <h2 className="mb-6 text-2xl font-black text-slate-950">{sections.faqHeading}</h2>
+        <div className="space-y-4">
+          {(pageData.faqs || []).map((item) => (
+            <div key={item.q} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
+              <h3 className="mb-2 text-base font-black text-slate-950">{item.q}</h3>
+              <p className="text-sm leading-7 text-slate-700">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
 
 const Footer = ({
   onNavigate,
@@ -1059,9 +981,7 @@ export default function App() {
     [currentPath, pages],
   );
   const heroDisplayTitle =
-    pageData.id === "home"
-      ? "欧意OKX交易所入口 - Web网址、APP下载、PC端访问与注册安装链接"
-      : pageData.title;
+    pageData.homeSections?.heroTitle ?? pageData.title;
   const heroTitle = useMemo(
     () => getHeroTitleParts(heroDisplayTitle),
     [heroDisplayTitle],
@@ -1113,26 +1033,6 @@ export default function App() {
     ? t("404,页面不存在,欧意交易所入口")
     : pageData?.keywords?.join(", ");
   const metaRobots = isNotFound ? "noindex,follow" : "index,follow";
-
-  useEffect(() => {
-    if (locale !== "zh-Hant") return;
-    const root = document.body;
-
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-    let node = walker.nextNode();
-    while (node) {
-      const textNode = node as Text;
-      const parentTag = textNode.parentElement?.tagName;
-      if (
-        parentTag !== "SCRIPT" &&
-        parentTag !== "STYLE" &&
-        textNode.nodeValue
-      ) {
-        textNode.nodeValue = localizeText(textNode.nodeValue, locale);
-      }
-      node = walker.nextNode();
-    }
-  }, [locale, pathname]);
 
   const navigate = (path: string) => {
     router.push(buildPathForLocale(path, locale));
@@ -1432,10 +1332,7 @@ export default function App() {
 
                   {/* --- SEO 文案深度区块 --- */}
                   {isBeginnerIndex ? (
-                    <BeginnerIndexContent
-                      pageData={pageData}
-                      onNavigate={navigate}
-                    />
+                    <BeginnerIndexContent pageData={pageData} />
                   ) : isBeginnerArticle ? (
                     <div className="mb-16 max-w-4xl mx-auto">
                       <article className="bg-white border border-slate-100 rounded-[2rem] p-8 md:p-12 shadow-sm">

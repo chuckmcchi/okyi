@@ -19,6 +19,26 @@
   Apple,
   Laptop,
 } from "lucide-react";
+export interface HomeSections {
+  /** 页面 Hero 展示标题（可读）；`title` 仍用于 meta / SEO */
+  heroTitle: string;
+  introLabel: string;
+  introHeading: string;
+  introParagraphs: string[];
+  highlightCards: { title: string; text: string }[];
+  advantages: {
+    label: string;
+    heading: string;
+    paragraphs: string[];
+  };
+  safety: {
+    heading: string;
+    paragraphs: string[];
+    cards: { title: string; text: string }[];
+  };
+  faqHeading: string;
+}
+
 export interface PageData {
   id: string;
   title: string;
@@ -30,6 +50,7 @@ export interface PageData {
   icon?: any;
   faqs?: { q: string; a: string }[];
   features?: { title: string; desc: string; icon: any; navId?: string }[];
+  homeSections?: HomeSections;
 }
 export const PAGES: Record<string, PageData> = {
   home: {
@@ -96,6 +117,60 @@ export const PAGES: Record<string, PageData> = {
         navId: "ouyi-okx-register",
       },
     ],
+    homeSections: {
+      heroTitle: "欧意OKX交易所入口 - Web网址、APP下载、PC端访问与注册安装链接",
+      introLabel: "欧意交易所入口",
+      introHeading: "欧意OKX交易所，Web网址、APP下载和注册入口",
+      introParagraphs: [
+        "欧意、欧易、OKX、OKEx、殴易OKX，很多时候是在说同一个交易平台的不同称呼。欧易是中文用户更常用的叫法，OKX是现在更通用的品牌名，OKEx则是早期名称。用户搜欧意或殴易OKX，多数也是在找欧易OKX的访问入口、APP下载地址、PC端网址和注册安装链接。",
+        "OKX通常被视为全球头部加密资产交易平台之一，覆盖现货、合约、C2C买币、赚币、Web3钱包和多端访问。对新手来说，先把下载、注册、认证、买U、资金划转和安全设置这几步理顺，比一上来研究复杂交易更重要。",
+      ],
+      highlightCards: [
+        {
+          title: "欧意OKX提供什么",
+          text: "常用功能包括现货交易、合约交易、C2C买币、充值提现、赚币产品、Web3钱包、手机APP、网页版和电脑客户端。",
+        },
+        {
+          title: "有哪些常见币种",
+          text: "新手常见会先看 BTC、ETH、USDT、USDC、SOL、OKB 等主流资产，也会看到不同公链、热门板块和Web3相关资产。",
+        },
+        {
+          title: "新手为什么容易上手",
+          text: "下载、注册、买U、划转、现货交易和安全设置都有清晰路径。先用小额资金熟悉流程，再看合约和复杂产品，会稳很多。",
+        },
+      ],
+      advantages: {
+        label: "欧易OKX的优势",
+        heading: "为什么很多人会选择欧易OKX",
+        paragraphs: [
+          "第一是产品线完整。新手可以从注册、买U、现货交易开始，熟悉以后再看合约、赚币和Web3钱包，不需要频繁切换不同平台。",
+          "第二是多端入口齐全。手机APP适合日常查看和确认操作，网页版适合临时访问，PC端适合长时间看盘、管理订单和多窗口使用。",
+          "第三是对新手相对友好。买U、资金账户、交易账户、身份认证、谷歌验证、资金密码这些流程虽然一开始看起来多，但路径比较清楚，按顺序处理就不容易乱。",
+        ],
+      },
+      safety: {
+        heading: "欧意OKX安不安全，怎么让自己更安心",
+        paragraphs: [
+          "判断交易所安不安全，不能只看名气，还要看三件事：平台规模是否足够大，账户保护工具是否完整，用户自己能不能把登录、提现和设备管理做扎实。欧易OKX的优势在于产品成熟、用户量大、风控和账户安全功能比较完整。",
+          "对新手来说，安心感不是来自一句“没风险”，而是来自可控的使用方式：先开谷歌验证和资金密码，设置防钓鱼码，绑定常用设备；第一次买U、划转、现货买卖和提现都用小额测试，确认流程熟了再增加金额。",
+        ],
+        cards: [
+          {
+            title: "账户保护",
+            text: "手机号、邮箱、谷歌验证、资金密码、防钓鱼码和设备管理都打开，账号被盗风险会低很多。",
+          },
+          {
+            title: "资金操作",
+            text: "充值、买U、划转、提现先用小额跑一遍。能独立查到账记录和订单记录，再增加使用金额。",
+          },
+          {
+            title: "交易风险",
+            text: "现货适合先熟悉流程，合约和杠杆放大收益也放大亏损，新手不要把它当成入门产品。",
+          },
+        ],
+      },
+      faqHeading: "欧意交易所入口常见问题",
+    },
   },
   "ouyi-okx-android": {
     id: "ouyi-okx-android",
