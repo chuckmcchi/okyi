@@ -1,6 +1,6 @@
 # 欧意 OKX 入口 · 殴易交易所网站导航
 
-面向中文用户的 **欧意 / 欧易 / OKX / 殴易** 访问与下载导航站，汇总 Web 网址、APP 下载、PC 端入口、注册安装与常见机型安装说明。线上地址：[https://chuckmcchi.github.io/okyi/](https://chuckmcchi.github.io/okyi/)（繁体：[/okyi/zh-hant/](https://chuckmcchi.github.io/okyi/zh-hant/)）。
+面向中文用户的 **欧意 / 欧易 / OKX / 殴易** 访问与下载导航站，汇总 Web 网址、APP 下载、PC 端入口、注册安装与常见机型安装说明。
 
 用户搜索「欧意交易所」「欧意 OKX 入口」「殴易 OKX」「OKX 下载」时，往往是在找**同一类需求**：确认官网入口、按设备下载 APP、完成注册与基础安全设置。本站按场景拆分独立页面，便于阅读，也便于搜索引擎理解站点结构。
 
@@ -23,7 +23,7 @@
 |------|------|
 | [ouxcex.com](https://ouxcex.com) | 欧意 / OKX 交易所入口与访问指引 |
 | [ouxxiazai.com](https://ouxxiazai.com) | 欧意 APP 下载与安装相关说明 |
-| [ouyiapp.com](https://ouyiapp.com) | 欧意手机端 APP 与多端入口 |
+| [yiouapp.com](https://yiouapp.com) | 欧意手机端 APP 与多端入口 |
 | [okooyi.com](https://okooyi.com) | 欧意 OKX 导航与常用入口汇总 |
 | [ouyicex.com](https://ouyicex.com) | 殴易 / 欧意交易所网站与访问专题 |
 
