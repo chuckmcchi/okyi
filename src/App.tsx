@@ -932,16 +932,15 @@ const Footer = ({
             © {currentYear} 欧意交易所入口.
             Web网址、下载地址、PC端访问与注册安装索引。
           </p>
-          <div className="flex gap-4 md:gap-8 text-[9px] text-slate-300 font-bold uppercase tracking-widest">
-            <span className="flex items-center gap-1">
-              <Shield size={10} className="text-slate-400" /> Access Notes
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle2 size={10} className="text-slate-400" /> User Check
-            </span>
-            <span className="flex items-center gap-1">
-              <Zap size={10} className="text-slate-400" /> Updated
-            </span>
+          <div className="flex items-center gap-4 text-xs font-bold text-slate-500">
+            <a
+              href="https://ouxpc.com/"
+              target="_blank"
+              rel="noopener"
+              className="text-slate-600 hover:text-blue-600 transition underline underline-offset-4"
+            >
+              欧意 OKX PC电脑版 (ouxpc.com)
+            </a>
           </div>
         </div>
       </div>
