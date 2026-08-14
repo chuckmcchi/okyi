@@ -341,7 +341,7 @@ const Navbar = ({
             data-cta="true"
             className="bg-cyan-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-cyan-700 transition-all shadow-sm shadow-cyan-600/20"
           >
-            {t("欧意OKX入口")}
+            {t("OKX 网址入口")}
           </button>
         </div>
 
@@ -466,7 +466,7 @@ const Navbar = ({
               </select>
             </div>
             <div className="mt-8 pt-8 border-t border-slate-100 italic text-[10px] text-slate-400">
-              欧意OKX入口 @ {currentYear}
+              OKX 网址入口 @ {currentYear}
             </div>
           </motion.div>
         )}
@@ -687,7 +687,7 @@ const beginnerTopicGrid = [
 
 const homePrimaryEntryCards = [
   {
-    title: "欧意OKX入口",
+    title: "OKX 网址入口",
     desc: "交易所入口、网站地址、访问链接和常用进入路径。",
     navId: "ouyi-okx-exchange",
     icon: Globe,
@@ -939,7 +939,7 @@ const Footer = ({
               rel="noopener"
               className="text-slate-600 hover:text-blue-600 transition underline underline-offset-4"
             >
-              欧意 OKX PC电脑版 (ouxpc.com)
+              欧意 OKX 网址入口导航 (ouxpc.com)
             </a>
             <a
               href="https://oyweb.net/"
@@ -947,7 +947,7 @@ const Footer = ({
               rel="noopener"
               className="text-blue-600 hover:text-blue-800 transition underline underline-offset-4"
             >
-              欧易web 官方网页版 (oyweb.net)
+              欧易 OKX 网页版登录入口 (oyweb.net)
             </a>
             <a
               href="https://oyipc.com/"
@@ -1191,7 +1191,7 @@ export default function App() {
                                 size={18}
                                 className="group-hover:translate-y-0.5 transition-transform"
                               />
-                              欧意OKX入口
+                              OKX 网址入口
                             </button>
                             <button
                               className="btn-secondary !py-3"
@@ -1210,7 +1210,7 @@ export default function App() {
                                 size={18}
                                 className="group-hover:translate-y-0.5 transition-transform"
                               />
-                              欧意OKX入口
+                              OKX 网址入口
                             </button>
                             <button
                               className="btn-secondary !py-3"
@@ -1478,7 +1478,7 @@ export default function App() {
             data-cta="true"
             className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3.5 rounded-lg flex items-center justify-center transition-colors shadow-lg shadow-cyan-600/20"
           >
-            欧意OKX入口
+            OKX 网址入口
           </button>
         ) : (
           <button
@@ -1486,7 +1486,7 @@ export default function App() {
             data-cta="true"
             className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3.5 rounded-lg flex items-center justify-center transition-colors shadow-lg shadow-cyan-600/20"
           >
-            欧意OKX入口
+            OKX 网址入口
           </button>
         )}
       </MobileStickyFooter>
