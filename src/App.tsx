@@ -937,9 +937,9 @@ const Footer = ({
               href="https://ouxpc.com/"
               target="_blank"
               rel="noopener"
-              className="text-slate-600 hover:text-blue-600 transition underline underline-offset-4"
+              className="text-blue-600 hover:text-blue-800 transition underline underline-offset-4"
             >
-              欧意 OKX 网址入口导航 (ouxpc.com)
+              欧意 OKX 网址入口：ouxpc.com
             </a>
             <a
               href="https://oyweb.net/"
@@ -947,15 +947,7 @@ const Footer = ({
               rel="noopener"
               className="text-blue-600 hover:text-blue-800 transition underline underline-offset-4"
             >
-              欧易 OKX 网页版登录入口 (oyweb.net)
-            </a>
-            <a
-              href="https://oyipc.com/"
-              target="_blank"
-              rel="noopener"
-              className="text-blue-600 hover:text-blue-800 transition underline underline-offset-4"
-            >
-              欧易 OKX 官方入口 (oyipc.com)
+              欧易 OKX 网页版入口：oyweb.net
             </a>
           </div>
         </div>
